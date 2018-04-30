@@ -56,6 +56,7 @@ crono_exe_HEADERS += \
 $${CRONO_SRC}/xos/logger/interface.hpp \
 $${CRONO_SRC}/xos/io/logger.hpp \
 $${CRONO_SRC}/xos/console/logger.hpp \
+$${CRONO_SRC}/xos/console/getopt/main.hpp \
 $${CRONO_SRC}/xos/app/console/crono/main.hpp \
 $${CRONO_SRC}/xos/console/main_main.hpp \
 
