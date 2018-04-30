@@ -60,8 +60,8 @@ protected:
     virtual int run(int argc, char_t** argv, char_t** env) {
         int err = 0;
         const lib::version& which_version = lib::crono::version::which();
-        const string_t version = which_version.to_string();
-        this->outlln("library version = ", version.chars(), NULL);
+        const string_t name(which_version.name()), version(which_version.to_string());
+        this->outlln(name.chars(), " library version = ", version.chars(), NULL);
         return err;
     }
 };
