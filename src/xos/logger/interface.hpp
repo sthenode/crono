@@ -570,6 +570,33 @@ else { if (__is_err_logged__) { XOS_ERR_LOG_TRACE(message); } }
 #endif /// !defined(LOG_TRACE)
 
 ///
+/// LOG_ FATALF .. TRACEF
+/// 
+#if !defined(LOG_FATALF)
+#define LOG_FATALF(__message__, ...) XOS_LOG_FATALF(__message__, ##__VA_ARGS__)
+#endif /// !defined(LOG_FATALF)
+
+#if !defined(LOG_ERRORF)
+#define LOG_ERRORF(__message__, ...) XOS_LOG_ERRORF(__message__, ##__VA_ARGS__)
+#endif /// !defined(LOG_ERRORF)
+
+#if !defined(LOG_WARNF)
+#define LOG_WARNF(__message__, ...) XOS_LOG_WARNF(__message__, ##__VA_ARGS__)
+#endif /// !defined(LOG_WARNF)
+
+#if !defined(LOG_INFOF)
+#define LOG_INFOF(__message__, ...) XOS_LOG_INFOF(__message__, ##__VA_ARGS__)
+#endif /// !defined(LOG_INFOF)
+
+#if !defined(LOG_DEBUGF)
+#define LOG_DEBUGF(__message__, ...) XOS_LOG_DEBUGF(__message__, ##__VA_ARGS__)
+#endif /// !defined(LOG_DEBUGF)
+
+#if !defined(LOG_TRACEF)
+#define LOG_TRACEF(__message__, ...) XOS_LOG_TRACEF(__message__, ##__VA_ARGS__)
+#endif /// !defined(LOG_TRACEF)
+
+///
 /// IF_LOGGED_ FATAL .. TRACE
 /// 
 #if !defined(IF_LOGGED_FATAL)
