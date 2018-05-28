@@ -151,12 +151,13 @@ public:
         return ((this->compare(to)) != 0);
     }
 
-    virtual void clear() {
+    virtual timet& clear() {
         set_hour(0);
         set_timezone(0);
         set_is_local(false);
         set_is_12(false);
         set_is_pm(false);
+        return *this;
     }
     virtual hours_t set_24_hour_to_12_hour() {
         is_12_ = true;

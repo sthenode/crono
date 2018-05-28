@@ -58,9 +58,10 @@ public:
     virtual ~datet() {
     }
 
-    virtual void clear() {
+    virtual datet& clear() {
         extends::clear();
         set_year(0);
+        return *this;
     }
     virtual years_t set_year(years_t to) {
         year_= to;
