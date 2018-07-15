@@ -227,6 +227,9 @@ public:
         implements::the_default() = this;
     }
     virtual ~instancet() {
+        if (implements::the_default() == this) {
+            implements::the_default() = old_default_;
+        }
     }
 private:
     instancet(const instancet &copy) {

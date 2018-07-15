@@ -234,6 +234,10 @@ protected:
         longopts = optstruct;
         return chars;
     }
+    virtual const char_t* arguments(const char_t**& args) {
+        args = 0;
+        return 0;
+    }
 };
 typedef maint<> main;
 
