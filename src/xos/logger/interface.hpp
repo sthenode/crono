@@ -707,4 +707,66 @@ else { if (__is_err_logged__) { XOS_ERR_LOG_TRACE(message); } }
 #define IS_ERR_LOGGED_TRACE(__message__) XOS_IS_ERR_LOGGED_TRACE(__message__)
 #endif /// !defined(IS_ERR_LOGGED_TRACE)
 
+///
+/// IS_LOGGING_ FATAL .. TRACE
+/// 
+#if !defined(IS_LOGGING)
+#define IS_LOGGING
+#endif /// !defined(IS_LOGGING)
+
+#if !defined(IS_LOGGING_FATAL)
+#define IS_LOGGING_FATAL(__message__) IS_LOGGED_FATAL(__message__)
+#endif /// !defined(IS_LOGGING_FATAL)
+
+#if !defined(IS_LOGGING_ERROR)
+#define IS_LOGGING_ERROR(__message__) IS_LOGGED_ERROR(__message__)
+#endif /// !defined(IS_LOGGING_ERROR)
+
+#if !defined(IS_LOGGING_WARN)
+#define IS_LOGGING_WARN(__message__) IS_LOGGED_WARN(__message__)
+#endif /// !defined(IS_LOGGING_WARN)
+
+#if !defined(IS_LOGGING_INFO)
+#define IS_LOGGING_INFO(__message__) IS_LOGGED_INFO(__message__)
+#endif /// !defined(IS_LOGGING_INFO)
+
+#if !defined(IS_LOGGING_DEBUG)
+#define IS_LOGGING_DEBUG(__message__) IS_LOGGED_DEBUG(__message__)
+#endif /// !defined(IS_LOGGING_DEBUG)
+
+#if !defined(IS_LOGGING_TRACE)
+#define IS_LOGGING_TRACE(__message__) IS_LOGGED_TRACE(__message__)
+#endif /// !defined(IS_LOGGING_TRACE)
+
+///
+/// IS_ERR_LOGGING_ FATAL .. TRACE
+/// 
+#if !defined(IS_ERR_LOGGING)
+#define IS_ERR_LOGGING
+#endif /// !defined(IS_ERR_LOGGING)
+
+#if !defined(IS_ERR_LOGGING_FATAL)
+#define IS_ERR_LOGGING_FATAL(__message__) IS_ERR_LOGGED_FATAL(__message__)
+#endif /// !defined(IS_ERR_LOGGING_FATAL)
+
+#if !defined(IS_ERR_LOGGING_ERROR)
+#define IS_ERR_LOGGING_ERROR(__message__) IS_ERR_LOGGED_ERROR(__message__)
+#endif /// !defined(IS_ERR_LOGGING_ERROR)
+
+#if !defined(IS_ERR_LOGGING_WARN)
+#define IS_ERR_LOGGING_WARN(__message__) IS_ERR_LOGGED_WARN(__message__)
+#endif /// !defined(IS_ERR_LOGGING_WARN)
+
+#if !defined(IS_ERR_LOGGING_INFO)
+#define IS_ERR_LOGGING_INFO(__message__) IS_ERR_LOGGED_INFO(__message__)
+#endif /// !defined(IS_ERR_LOGGING_INFO)
+
+#if !defined(IS_ERR_LOGGING_DEBUG)
+#define IS_ERR_LOGGING_DEBUG(__message__) IS_ERR_LOGGED_DEBUG(__message__)
+#endif /// !defined(IS_ERR_LOGGING_DEBUG)
+
+#if !defined(IS_ERR_LOGGING_TRACE)
+#define IS_ERR_LOGGING_TRACE(__message__) IS_ERR_LOGGED_TRACE(__message__)
+#endif /// !defined(IS_ERR_LOGGING_TRACE)
+
 #endif /// _XOS_LOGGER_INTERFACE_HPP 

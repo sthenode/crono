@@ -19,6 +19,7 @@
 ///   Date: 4/9/2018
 ///////////////////////////////////////////////////////////////////////
 #include "xos/app/console/crono/main.hpp"
+#include "xos/console/main_main.cpp"
 
 namespace xos {
 namespace app {

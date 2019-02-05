@@ -21,7 +21,7 @@
 #include "xos/lib/crono/version.hpp"
 
 #if !defined(XOS_LIB_CRONO_VERSION_NAME)
-#define XOS_LIB_CRONO_VERSION_NAME "crono"
+#define XOS_LIB_CRONO_VERSION_NAME "libcrono"
 #endif /// !defined(XOS_LIB_CRONO_VERSION_NAME)
 
 #if !defined(XOS_LIB_CRONO_VERSION_MAJOR)
