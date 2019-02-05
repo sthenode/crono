@@ -66,7 +66,6 @@ crono_exe_SOURCES += \
 $${CRONO_SRC}/xos/logger/interface.cpp \
 $${CRONO_SRC}/xos/console/logger.cpp \
 $${CRONO_SRC}/xos/app/console/crono/main.cpp \
-$${CRONO_SRC}/xos/console/main_main.cpp \
 
 ########################################################################
 # crono_exe FRAMEWORKS

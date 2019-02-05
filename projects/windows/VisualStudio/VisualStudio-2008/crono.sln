@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "app", "app", "{3B5D19E1-61CB-4369-9D1C-892FFFE77E1E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{D15943C2-F756-4CF4-9212-7F36238E284D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "properties", "properties", "{CCF3AE99-4B9D-420F-8A92-BF1315246AA8}"
+	ProjectSection(SolutionItems) = preProject
+		..\crono.vsprops = ..\crono.vsprops
+		..\fila.vsprops = ..\fila.vsprops
+		..\nadir.vsprops = ..\nadir.vsprops
+		..\rostra.vsprops = ..\rostra.vsprops
+		..\vcproj.vsprops = ..\vcproj.vsprops
+		vcversion.vsprops = vcversion.vsprops
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcrono", "libcrono\libcrono.vcproj", "{A92512C3-AFD5-454C-9907-064C7F9BCF07}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "crono", "crono\crono.vcproj", "{D60CA049-C5AB-4919-B8F5-41269E59E384}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A92512C3-AFD5-454C-9907-064C7F9BCF07} = {A92512C3-AFD5-454C-9907-064C7F9BCF07}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A92512C3-AFD5-454C-9907-064C7F9BCF07}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A92512C3-AFD5-454C-9907-064C7F9BCF07}.Debug|Win32.Build.0 = Debug|Win32
+		{A92512C3-AFD5-454C-9907-064C7F9BCF07}.Debug|x64.ActiveCfg = Debug|Win32
+		{A92512C3-AFD5-454C-9907-064C7F9BCF07}.Debug|x64.Build.0 = Debug|Win32
+		{A92512C3-AFD5-454C-9907-064C7F9BCF07}.Release|Win32.ActiveCfg = Release|Win32
+		{A92512C3-AFD5-454C-9907-064C7F9BCF07}.Release|Win32.Build.0 = Release|Win32
+		{A92512C3-AFD5-454C-9907-064C7F9BCF07}.Release|x64.ActiveCfg = Release|x64
+		{A92512C3-AFD5-454C-9907-064C7F9BCF07}.Release|x64.Build.0 = Release|x64
+		{D60CA049-C5AB-4919-B8F5-41269E59E384}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D60CA049-C5AB-4919-B8F5-41269E59E384}.Debug|Win32.Build.0 = Debug|Win32
+		{D60CA049-C5AB-4919-B8F5-41269E59E384}.Debug|x64.ActiveCfg = Debug|Win32
+		{D60CA049-C5AB-4919-B8F5-41269E59E384}.Release|Win32.ActiveCfg = Release|Win32
+		{D60CA049-C5AB-4919-B8F5-41269E59E384}.Release|Win32.Build.0 = Release|Win32
+		{D60CA049-C5AB-4919-B8F5-41269E59E384}.Release|x64.ActiveCfg = Release|x64
+		{D60CA049-C5AB-4919-B8F5-41269E59E384}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D60CA049-C5AB-4919-B8F5-41269E59E384} = {3B5D19E1-61CB-4369-9D1C-892FFFE77E1E}
+		{A92512C3-AFD5-454C-9907-064C7F9BCF07} = {D15943C2-F756-4CF4-9212-7F36238E284D}
+	EndGlobalSection
+EndGlobal
