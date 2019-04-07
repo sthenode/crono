@@ -76,8 +76,10 @@ ${crono_USRLIBDIRS} \
 #
 # Executable .cpp sources
 #
-#crono_exe_EXE_CPP_SOURCES += \
-#${CRONO_SRC}/crono/base/Base.cpp \
+crono_exe_EXE_CPP_SOURCES += \
+${CRONO_SRC}/xos/logger/interface.cpp \
+${CRONO_SRC}/xos/console/logger.cpp \
+${CRONO_SRC}/xos/app/console/crono/main.cpp \
 
 #
 # Executable .m sources
