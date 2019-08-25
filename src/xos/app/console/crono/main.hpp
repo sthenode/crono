@@ -21,7 +21,7 @@
 #ifndef _XOS_APP_CONSOLE_CRONO_MAIN_HPP
 #define _XOS_APP_CONSOLE_CRONO_MAIN_HPP
 
-#include "xos/console/getopt/main.hpp"
+#include "xos/console/lib/version/main.hpp"
 #include "xos/lib/crono/version.hpp"
 
 namespace xos {
@@ -29,25 +29,22 @@ namespace app {
 namespace console {
 namespace crono {
 
-typedef ::xos::console::getopt::main::implements maint_implements;
-typedef ::xos::console::getopt::main maint_extends;
 ///////////////////////////////////////////////////////////////////////
 ///  Class: maint
 ///////////////////////////////////////////////////////////////////////
-template <class TImplements = maint_implements, class TExtends = maint_extends>
+template 
+<class TImplements = xos::console::lib::version::maint_implements, 
+ class TExtends = xos::console::lib::version::maint<xos::lib::crono::version> >
 class _EXPORT_CLASS maint: virtual public TImplements, public TExtends {
 public:
     typedef TImplements implements;
     typedef TExtends extends;
+    typedef maint derives;
 
-    typedef typename implements::string_t string_t;
-    typedef typename implements::file_t file_t;
-    typedef typename implements::null_file_t null_file_t;
-    enum { null_file = implements::null_file};
     typedef typename implements::char_t char_t;
-    typedef typename implements::end_char_t end_char_t;
-    enum { end_char = implements::end_char };
 
+    ///////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////
     maint() {
     }
     virtual ~maint() {
@@ -57,13 +54,31 @@ private:
     }
 
 protected:
+    ///////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////
+    int (derives::*run_)(int argc, char_t** argv, char_t** env);
     virtual int run(int argc, char_t** argv, char_t** env) {
-        int err = 0;
-        const lib::version& which_version = lib::crono::version::which();
-        const string_t name(which_version.name()), version(which_version.to_string());
-        this->outlln(name.chars(), " library version = ", version.chars(), NULL);
+        if ((run_)) {
+            return (this->*run_)(argc, argv, env);
+        }
+        return default_run(argc, argv, env);
+    }
+    virtual int default_run(int argc, char_t** argv, char_t** env) {
+        int err = this->version_run(argc, argv, env);
         return err;
     }
+    virtual int this_version_run(int argc, char_t** argv, char_t** env) {
+        int err = this->version_run(argc, argv, env);
+        return err;
+    }
+    virtual int set_version_run(int argc, char_t**argv, char_t**env) {
+        int err = 0;
+        run_ = &derives::this_version_run;
+        return err;
+    }
+    
+    ///////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////
 };
 typedef maint<> main;
 

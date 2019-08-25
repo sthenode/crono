@@ -24,6 +24,8 @@
 #include "xos/console/getopt/main_opt.hpp"
 #include "xos/io/logger.hpp"
 
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
 #define XOS_CONSOLE_MAIN_LOGGING_OPT "logging-level"
 #define XOS_CONSOLE_MAIN_LOGGING_OPTARG_REQUIRED MAIN_OPT_ARGUMENT_REQUIRED
 #define XOS_CONSOLE_MAIN_LOGGING_OPTARG_RESULT 0
@@ -64,6 +66,8 @@
     XOS_CONSOLE_MAIN_DEBUG_OPTARG_RESULT, \
     XOS_CONSOLE_MAIN_DEBUG_OPTVAL_C}, \
 
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
 #define CRONO_CONSOLE_MAIN_OPTIONS_CHARS \
     XOS_CONSOLE_MAIN_LOGGING_OPTVAL_S \
     XOS_CONSOLE_MAIN_HELP_OPTVAL_S
@@ -71,6 +75,20 @@
 #define CRONO_CONSOLE_MAIN_OPTIONS_OPTIONS \
     XOS_CONSOLE_MAIN_LOGGING_OPTION \
     XOS_CONSOLE_MAIN_HELP_OPTION
+
+#define XOS_CONSOLE_MAIN_OPTIONS_CHARS CRONO_CONSOLE_MAIN_OPTIONS_CHARS
+#define XOS_CONSOLE_MAIN_OPTIONS_OPTIONS CRONO_CONSOLE_MAIN_OPTIONS_OPTIONS
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+#define CRONO_CONSOLE_VERSION_MAIN_ARGS 0
+#define CRONO_CONSOLE_VERSION_MAIN_ARGV
+
+#define XOS_CONSOLE_VERSION_MAIN_ARGS CRONO_CONSOLE_VERSION_MAIN_ARGS
+#define XOS_CONSOLE_VERSION_MAIN_ARGV CRONO_CONSOLE_VERSION_MAIN_ARGV
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
 
 namespace xos {
 namespace console {
