@@ -21,7 +21,11 @@
 # build QtCreator .pri file for crono
 ########################################################################
 
+UNAME = $$system(uname)
+
+contains(UNAME,Darwin) {
 BUILD_OS = CRONO_OS
+} # contains(UNAME,Darwin)
 
 ########################################################################
 # rostra
