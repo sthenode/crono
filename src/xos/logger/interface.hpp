@@ -680,6 +680,11 @@ else { if (__is_err_logged__) { XOS_ERR_LOG_TRACE(message); } }
 #define IS_LOGGED_TRACE(__message__) XOS_IS_LOGGED_TRACE(__message__)
 #endif /// !defined(IS_LOGGED_TRACE)
 
+#if !defined(IS_LOGGED_DEBUG_TRACE)
+#define IS_LOGGED_DEBUG_TRACE(__is_debug__, __message__) \
+    if (__is_debug__) { IS_LOGGED_DEBUG(__message__); } else { XOS_IS_LOGGED_TRACE(__message__); }
+#endif /// !defined(IS_LOGGED_TRACE)
+
 #if !defined(IF_LOGGED_DEBUG_TRACE)
 #define IF_LOGGED_DEBUG_TRACE(__is_debug__, __is_logged__, __message__) \
     if (__is_logged__) { if (__is_debug__) { IS_LOGGED_DEBUG(__message__); } else { IS_LOGGED_TRACE(__message__); } }
